@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
@@ -359,12 +360,6 @@
             .example-buttons {
                 flex-direction: column;
             }
-            /* Tambahkan styling untuk toleransi di mobile */
-            div[style*="display: flex; align-items: center; gap: 15px"] {
-                flex-direction: column !important;
-                align-items: flex-start !important;
-                gap: 10px !important;
-            }
         }
         .loading {
             display: inline-block;
@@ -435,7 +430,7 @@
                         <input type="number" step="any" placeholder="b₂" id="gj_1_3" title="Konstanta b₂">
                     </div>
                     
-                    <div class="coefficient-label">Baris 3: a₃₁x₁ + a₃₂x₂ + a₂₃x₃ = b₃</div>
+                    <div class="coefficient-label">Baris 3: a₃₁x₁ + a₃₂x₂ + a₃₃x₃ = b₃</div>
                     <div class="matrix-input">
                         <input type="number" step="any" placeholder="a₃₁" id="gj_2_0" title="Koefisien a₃₁">
                         <input type="number" step="any" placeholder="a₃₂" id="gj_2_1" title="Koefisien a₃₂">
@@ -504,16 +499,12 @@
                         <input type="number" step="any" placeholder="b₃" id="gs_2_3" title="Konstanta b₃">
                     </div>
                     
-                    <div style="margin: 25px 0; padding: 15px; background: #f0f8ff; border-radius: 10px; display: flex; align-items: center; gap: 15px; flex-wrap: wrap;">
-                        <div style="display: flex; align-items: center; gap: 8px;">
-                            <label style="font-weight: bold; color: #2c3e50; font-size: 14px;">⚙️ Toleransi Error:</label>
-                            <input type="number" step="any" value="0.0001" id="tolerance" style="padding: 8px; border: 2px solid #ddd; border-radius: 6px; width: 100px; font-size: 14px;">
-                        </div>
+                    <div style="margin: 25px 0; padding: 20px; background: #f0f8ff; border-radius: 10px;">
+                        <label style="font-weight: bold; color: #2c3e50;">⚙️ Toleransi Error: </label>
+                        <input type="number" step="any" value="0.0001" id="tolerance" style="padding: 10px; border: 2px solid #ddd; border-radius: 8px; margin: 0 10px;">
                         
-                        <div style="display: flex; align-items: center; gap: 8px;">
-                            <label style="font-weight: bold; color: #2c3e50; font-size: 14px;">🔄 Maksimum Iterasi:</label>
-                            <input type="number" value="100" id="maxIterations" style="padding: 8px; border: 2px solid #ddd; border-radius: 6px; width: 80px; font-size: 14px;">
-                        </div>
+                        <label style="margin-left: 25px; font-weight: bold; color: #2c3e50;">🔄 Maksimum Iterasi: </label>
+                        <input type="number" value="100" id="maxIterations" style="padding: 10px; border: 2px solid #ddd; border-radius: 8px; margin: 0 10px;">
                     </div>
                     
                     <button class="btn" onclick="solveGaussSeidel()">🚀 Selesaikan dengan Gauss-Seidel</button>
